@@ -1,0 +1,14 @@
+
+LV: Checking a loop in "_ZN8__main__14loop8_sol$2416E5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedEx" from loop8_sol
+LV: Loop hints: force=? width=0 unroll=0
+LV: Found a loop: B40
+LV: Found an unidentified PHI.  %vsum.023 = phi double [ %.470, %B40 ], [ 0.000000e+00, %B40.preheader ]
+LV: Can't vectorize the instructions or CFG
+LV: Not vectorizing: Cannot prove legality.
+
+LV: Checking a loop in "_ZN7cpython8__main__14loop8_sol$2416E5ArrayIdLi1E1C7mutable7alignedE5ArrayIdLi1E1C7mutable7alignedEx" from loop8_sol
+LV: Loop hints: force=? width=0 unroll=0
+LV: Found a loop: B40.i
+LV: Found an unidentified PHI.  %vsum.023.i = phi double [ %.470.i, %B40.i ], [ 0.000000e+00, %B40.i.preheader ]
+LV: Can't vectorize the instructions or CFG
+LV: Not vectorizing: Cannot prove legality.
