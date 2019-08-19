@@ -5,6 +5,7 @@ class Error(Exception):
    pass
 class OutputNotEqualError(Error):
    """Raised when the two outputs are not the same"""
+   print("The output of both functions is not the same")
    pass
 def Compare_loops(Orig_Output,Sol_Output):
     counter=0
@@ -12,6 +13,7 @@ def Compare_loops(Orig_Output,Sol_Output):
         counter+=1
         print("*******************************")
         print("Checking element "+str(counter)+ ":")
+        #if (True):
         try:
             if (type(item1)!=type(item2)):
                 print("For element "+str(counter)+ " both items are not the same type")

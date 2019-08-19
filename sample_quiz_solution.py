@@ -17,7 +17,7 @@ def loop1(A,B,C,D,E,n):
         
     return [a,b,d]
     
-
+##### Solution with loop distribution
 def loop1_sol(A,B,C,D,E,n):
     a=np.copy(A)
     b=np.copy(B)
@@ -25,10 +25,11 @@ def loop1_sol(A,B,C,D,E,n):
     d=np.copy(D)
     e=np.copy(E)
     
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n-1):
+        a[i+1] = b[i]+c[i];
+        b[i]   = c[i]*e[i];
+    for i in range (n-1):
+        d[i]   = a[i]*e[i];
     return [a,b,d ]   
         
 def loop2(A,B,C,D,n):
@@ -47,10 +48,10 @@ def loop2_sol(A,B,C,D,n):
     b=np.copy(B)
     c=np.copy(C)
     d=np.copy(D)
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n-1):
+        b[i] = a[i+1]*d[i]
+    for j in range (n-1):
+        a[j] = b[j-1]+c[j]
     return [a,b]
     
 def loop3(A,B,C,D,n):
@@ -71,10 +72,9 @@ def loop3_sol(A,B,C,D,n):
     b=np.copy(B)
     c=np.copy(C)
     d=np.copy(D)
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n-1):
+        a[i] = b[i] + c[i] * c[i] + b[i]*b[i] + c[i];
+        d[i] = a[i] + A[i+1];
         
     return [a,d]
     
@@ -95,10 +95,10 @@ def loop4_sol(A,B,C,D,n):
     b=np.copy(B)
     c=np.copy(C)
     d=np.copy(D)
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n):
+        a[i] += c[i] * d[i]
+    for i in range (n):
+        b[i] = b[i - 1] + a[i] + d[i]
         
     return a,b
 def loop5(A,B,C,D,n):
@@ -122,10 +122,13 @@ def loop5_sol(A,B,C,D,n):
     b=np.copy(B)
     c=np.copy(C)
     d=np.copy(D)
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n-1):
+        a[i] += c[i] * d[i]
+    for i in range (int(n/2)):
+        b[i] = b[i + 1] + a[i] + d[i]
+    for i in range (int(n/2),n-1,1):
+        b[i] = b[i - 1] + a[i] + d[i]
+
         
     return [a,b]
     
@@ -146,10 +149,9 @@ def loop6_sol(AA, BB, nn):
     aa=np.copy(AA)
     bb=np.copy(BB)
 
-    ##### Write your solution here
-    
-    
-    
+    for j in range (1,nn):
+        for i in range (nn):
+            aa[j][i] = aa[j - 1][i] + bb[j][i];
         
     return [aa,bb]
     
@@ -174,10 +176,12 @@ def loop7_sol(AA, BB, CC, nn):
     aa=np.copy(AA)
     bb=np.copy(BB)
     cc=np.copy(CC)
-    ##### Write your solution here
-    
-    
-    
+    for j in range(1,nn):
+        for i in range(nn):
+            aa[j][i] = aa[j-1][i] + cc[j][i]
+    for i in range(nn):
+        for j in range(1,nn):
+            bb[j][i] = bb[j][i-1] + cc[j][i]
 
         
     return [aa, bb]
@@ -200,10 +204,9 @@ def loop8_sol(A,B,n):
     a=np.copy(A)
     b=np.copy(B)
     vsum=0
-    ##### Write your solution here
-    
-    
-    
+    for i in range (n-1):
+        vsum += a[i];
+        b[i] = vsum;
         
     return [vsum,b]
 
