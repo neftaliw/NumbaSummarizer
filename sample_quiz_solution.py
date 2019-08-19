@@ -1,5 +1,5 @@
 from numba import jit
-from NumbaSummarizer import vector_print, vector_wrapper, init_diagnostics, Simd_profile, Compare_loops
+from NumbaSummarizer import vector_print, vector_wrapper, Simd_profile, Compare_loops
 import numpy as np
 
 def loop1(A,B,C,D,E,n):
@@ -30,7 +30,7 @@ def loop1_sol(A,B,C,D,E,n):
         b[i]   = c[i]*e[i];
     for i in range (n-1):
         d[i]   = a[i]*e[i];
-    return [a,b,d ]   
+    return [a,d,d ]   
         
 def loop2(A,B,C,D,n):
     a=np.copy(A)

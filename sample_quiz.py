@@ -1,5 +1,5 @@
 from numba import jit
-from NumbaSummarizer import vector_print, vector_wrapper, init_diagnostics, Simd_profile, Compare_loops
+from NumbaSummarizer import vector_print, vector_wrapper, Simd_profile, Compare_loops
 import numpy as np
 
 def loop1(A,B,C,D,E,n):
@@ -41,7 +41,7 @@ def loop2(A,B,C,D,n):
         b[i] = a[i+1]*d[i]
         
     return [a,b]
-##### Solution with loop distribution
+
 def loop2_sol(A,B,C,D,n):
     a=np.copy(A)
     b=np.copy(B)
@@ -64,7 +64,6 @@ def loop3(A,B,C,D,n):
         
     return [a,d]
     
-#### Solution with temporary array
 
 def loop3_sol(A,B,C,D,n):
     a=np.copy(A)
@@ -89,7 +88,6 @@ def loop4(A,B,C,D,n):
         
     return [a,b]
     
-#### Partial vectorization with distribution
 def loop4_sol(A,B,C,D,n):
     a=np.copy(A)
     b=np.copy(B)
@@ -115,7 +113,6 @@ def loop5(A,B,C,D,n):
         
     return [a,b]
     
-##### Partial vectorization using distribution plus loop peeling
 
 def loop5_sol(A,B,C,D,n):
     a=np.copy(A)
@@ -140,7 +137,6 @@ def loop6(AA, BB, nn):
     return [aa,bb]
     
     
-###### Vectorization with loop interchange
 
 def loop6_sol(AA, BB, nn):
     aa=np.copy(AA)
@@ -168,7 +164,6 @@ def loop7(AA, BB, CC, nn):
     return [aa, bb]
     
     
-######## Loop distribution plus interchange for full vectorization
 
 def loop7_sol(AA, BB, CC, nn):
     aa=np.copy(AA)
@@ -194,7 +189,6 @@ def loop8(A,B,n):
     return [vsum,b]
     
     
-    ##### Cannot be transformed, write the same loop
 
 def loop8_sol(A,B,n):
     a=np.copy(A)

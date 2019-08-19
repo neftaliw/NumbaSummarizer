@@ -9,6 +9,7 @@ class OutputNotEqualError(Error):
    pass
 def Compare_loops(Orig_Output,Sol_Output):
     counter=0
+
     for item1,item2 in zip(Orig_Output,Sol_Output):
         counter+=1
         print("*******************************")
