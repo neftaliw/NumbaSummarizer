@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'NumbaSummarizer',         # How you named your package folder (MyLib)
   packages = ['NumbaSummarizer'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.1.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'This is a summarizer for Numba\'s vector report',   # Give a short description about your library
+  description = 'This is a summarizer for Numba\'s vector report. Meant for review',   # Give a short description about your library
   author = 'Neftali W.',                   # Type in your name
   author_email = 'neftaliw@hotmail.com',      # Type in your E-Mail
   url = 'https://github.com/neftaliw/NumbaSummarizer',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/neftaliw/NumbaSummarizer/archive/0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/neftaliw/NumbaSummarizer/archive/0.1.1.tar.gz',    # I explain this later on
   keywords = ['Numba', 'Vectorization', 'Profiler'],   # Keywords that define your package best
   install_requires=[           
           'numpy',
@@ -24,5 +24,6 @@ setup(
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
   ],
 )

@@ -1,2 +1,2 @@
-from NumbaSummarizer.VectorReport import init_diagnostics, vector_wrapper, vector_print, Simd_profile
+from NumbaSummarizer.VectorReport import vector_wrapper, vector_print, Simd_profile
 from NumbaSummarizer.LoopVerifier import Compare_loops
