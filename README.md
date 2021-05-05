@@ -7,11 +7,4 @@ The folder name Sample_lecture contains jupyter notebooks used in our teaching e
 
 If you use any of the content for your research please remember to cite us:
 
-@inproceedings{watkinson2020numbasummarizer,
-  title={NumbaSummarizer: A Python Library for Simplified Vectorization Reports},
-  author={Watkinson, Neftali and Tai, Preston and Nicolau, Alexandru and Veidenbaum, Alexander},
-  booktitle={2020 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)},
-  pages={1--7},
-  year={2020},
-  organization={IEEE}
-}
+Watkinson, N., Tai, P., Nicolau, A., & Veidenbaum, A. (2020, May). NumbaSummarizer: A Python Library for Simplified Vectorization Reports. In 2020 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW) (pp. 1-7). IEEE.
